@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Briefcase, Building, MapPin, Calendar } from 'lucide-react';
+import { Briefcase, Building, MapPin, Calendar, ArrowUp } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
