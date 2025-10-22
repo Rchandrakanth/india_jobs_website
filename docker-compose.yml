@@ -8,12 +8,12 @@ services:
       dockerfile: Dockerfile
       target: production
     ports:
-      - "8080:8080"
+      - "8085:8085"
     environment:
       - NODE_ENV=production
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/"]
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8085/"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -21,7 +21,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.indijobs.rule=Host(`localhost`)"
-      - "traefik.http.services.indijobs.loadbalancer.server.port=8080"
+      - "traefik.http.services.indijobs.loadbalancer.server.port=8085"
 
   # Optional: Add a reverse proxy
   nginx-proxy:
