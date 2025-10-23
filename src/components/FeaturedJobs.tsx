@@ -9,7 +9,7 @@ const FeaturedJobs = () => {
   const featuredJobs = [
     {
       id: 1,
-      title: 'Senior Frontend Developer',
+      title: ' Frontend Developer',
       company: 'Tech Mahindra',
       location: 'Hyderabad, Telangana',
       type: 'Full-time',
